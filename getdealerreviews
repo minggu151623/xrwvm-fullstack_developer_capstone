@@ -1,0 +1,2 @@
+$ curl -X GET http://127.0.0.1:8000/fetchReviews/dealer/1
+[{"id":1,"name":"root","dealership":"Best Cars Dealership - Wichita","review":"Fantastic services","purchase":true,"car_make":"Toyota","car_model":"Camry","car_year":2024,"purchase_date":"2024-06-15"}]

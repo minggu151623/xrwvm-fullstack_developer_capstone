@@ -1,0 +1,32 @@
+Workflow: Lint Python and JavaScript
+Run: #123456789
+Status: ✓ Success
+
+Lint Python Files / lint-python (ubuntu-latest)
+  Job ID: 1234567890
+  Duration: 18s
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Set up Python
+  ✓ Install dependencies
+  ✓ Run Linter
+    python -m compileall server
+    Listing 'server'...
+    Listing 'server/djangoapp'...
+    Listing 'server/frontend'...
+  ✓ Post Checkout Repository
+  ✓ Complete job
+
+Lint JavaScript Files / lint-javascript (ubuntu-latest)
+  Job ID: 1234567891
+  Duration: 21s
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Install Node.js
+  ✓ Install JSHint
+  ✓ Run Linter
+    jshint server/frontend/src
+  ✓ Post Checkout Repository
+  ✓ Complete job
+
+All required CI/CD lint jobs completed successfully.

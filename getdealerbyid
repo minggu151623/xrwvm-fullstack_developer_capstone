@@ -1,0 +1,2 @@
+$ curl -X GET http://127.0.0.1:8000/fetchDealer/1
+{"id":1,"city":"Wichita","state":"Kansas","address":"7420 East Kellogg Drive","zip":"67207","lat":37.6763,"long":-97.2364,"short_name":"Best Cars Wichita","full_name":"Best Cars Dealership - Wichita"}
