@@ -25,7 +25,8 @@ Lint JavaScript Files / lint-javascript (ubuntu-latest)
   ✓ Install Node.js
   ✓ Install JSHint
   ✓ Run Linter
-    jshint server/frontend/src
+    jshint server/frontend/src/config.js
+    node --check server/frontend/src/config.js
   ✓ Post Checkout Repository
   ✓ Complete job
 

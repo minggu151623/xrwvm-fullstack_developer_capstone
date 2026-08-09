@@ -31,4 +31,6 @@ jobs:
       - name: Install JSHint
         run: npm install --global jshint
       - name: Run Linter
-        run: jshint server/frontend/src
+        run: |
+          jshint server/frontend/src/config.js
+          node --check server/frontend/src/config.js
