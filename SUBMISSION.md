@@ -30,7 +30,7 @@ file after capture.
 | 19 | `dealersbystate.png` |
 | 20 | `dealer_id_reviews.png` |
 | 21 | `dealership_review_submission.png` |
-| 22 | `added_review.png` |
+| 21 | `added_review.png` |
 | 22 | `CICD` |
 | 23 | `deploymentURL` |
 | 24 | `deployed_landingpage.png` |
