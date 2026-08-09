@@ -25,11 +25,11 @@ file after capture.
 | 13 | `admin_logout.png` |
 | 14–15 | `getallcarmakes` |
 | 16 | `analyzereview` |
-| 17 | `get_dealers.png` |
-| 18 | `get_dealers_loggedin.png` |
-| 19 | `dealersbystate.png` |
-| 20 | `dealer_id_reviews.png` |
-| 21 | `dealership_review_submission.png` |
+| 16 | `get_dealers.png` |
+| 17 | `get_dealers_loggedin.png` |
+| 18 | `dealersbystate.png` |
+| 19 | `dealer_id_reviews.png` |
+| 20 | `dealership_review_submission.png` |
 | 21 | `added_review.png` |
 | 22 | `CICD` |
 | 23 | `deploymentURL` |
