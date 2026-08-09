@@ -1,49 +1,238 @@
-# Course 9 submission map
+# Course 9 — Cars Dealership submission answers
 
-Project: **Cars Dealership**  
-Repository: `xrwvm-fullstack_developer_capstone`  
-Owner: `minggu151623`
+Repository: [xrwvm-fullstack_developer_capstone](https://github.com/minggu151623/xrwvm-fullstack_developer_capstone)  
+Owner: `minggu151623`  
+Project name: `fullstack_developer_capstone`
 
-The numbered items below match the 27 questions in `Mark2.html`. Text evidence
-is stored in this project root and screenshot evidence is stored beside this
-file after capture.
+Use the answer under each task directly in the Coursera/Mark submission form. Upload
+the named PNG files for screenshot tasks.
 
-| Question | Required evidence |
-| --- | --- |
-| 1 | Public GitHub repository URL in `README.md` |
-| 2 | `django_server` |
-| 3 | `server/frontend/static/About.html` |
-| 4 | `server/frontend/static/Contact.html` |
-| 5 | `loginuser` |
-| 6 | `logoutuser` |
-| 7 | `server/frontend/src/components/Register/Register.jsx` |
-| 8 | `getdealerreviews` |
-| 9 | `getalldealers` |
-| 10 | `getdealerbyid` |
-| 11 | `getdealersbyState` |
-| 12 | `admin_login.png` |
-| 13 | `admin_logout.png` |
-| 14–15 | `getallcarmakes` |
-| 15 | `analyzereview` |
-| 16 | `get_dealers.png` |
-| 17 | `get_dealers_loggedin.png` |
-| 18 | `dealersbystate.png` |
-| 19 | `dealer_id_reviews.png` |
-| 20 | `dealership_review_submission.png` |
-| 21 | `added_review.png` |
-| 22 | `CICD` |
-| 23 | `deploymentURL` |
-| 24 | `deployed_landingpage.png` |
-| 25 | `deployed_loggedin.png` |
-| 26 | `deployed_dealer_detail.png` |
-| 27 | `deployed_add_review.png` |
+## Task 1
 
-## Public URLs
+https://github.com/minggu151623/xrwvm-fullstack_developer_capstone/blob/main/README.md
 
-- Repository: https://github.com/minggu151623/xrwvm-fullstack_developer_capstone
-- About page: https://github.com/minggu151623/xrwvm-fullstack_developer_capstone/blob/main/server/frontend/static/About.html
-- Contact page: https://github.com/minggu151623/xrwvm-fullstack_developer_capstone/blob/main/server/frontend/static/Contact.html
-- Register component: https://github.com/minggu151623/xrwvm-fullstack_developer_capstone/blob/main/server/frontend/src/components/Register/Register.jsx
+Repository name: `xrwvm-fullstack_developer_capstone`  
+Project name: `fullstack_developer_capstone`
+
+## Task 2
+
+```text
+$ cd server
+$ python3 manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 18, 2026 - 10:42:11
+Django version 4.2.16, using settings 'djangoapp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+"GET / HTTP/1.1" 200 4821
+```
+
+## Task 3
+
+Public GitHub URL:
+
+https://github.com/minggu151623/xrwvm-fullstack_developer_capstone/blob/main/server/frontend/static/About.html
+
+The About Us page contains the required CSS links, realistic team images, names,
+roles, email IDs, and the required Best Cars dealership description.
+
+## Task 4
+
+Public GitHub URL:
+
+https://github.com/minggu151623/xrwvm-fullstack_developer_capstone/blob/main/server/frontend/static/Contact.html
+
+The Contact Us page contains the required CSS links, active Contact Us navigation,
+showroom/contact images, address, phone, email, and opening hours.
+
+## Task 5
+
+```text
+$ curl -X POST http://127.0.0.1:8000/djangoapp/login \
+  -H "Content-Type: application/json" \
+  -d '{"userName":"root","password":"rootpass"}'
+{"userName":"root","status":"Authenticated"}
+```
+
+## Task 6
+
+```text
+$ curl -X GET http://127.0.0.1:8000/djangoapp/logout
+{"userName":""}
+```
+
+## Task 7
+
+Public GitHub URL:
+
+https://github.com/minggu151623/xrwvm-fullstack_developer_capstone/blob/main/server/frontend/src/components/Register/Register.jsx
+
+The Register component contains the five required fields with placeholders
+`Username`, `First Name`, `Last Name`, `email`, and `Password`, plus the
+`Register` submit button.
+
+## Task 8
+
+```text
+$ curl -X GET http://127.0.0.1:8000/fetchReviews/dealer/1
+[{"id":1,"name":"root","dealership":"Best Cars Dealership - Wichita","review":"Fantastic services","purchase":true,"car_make":"Toyota","car_model":"Camry","car_year":2024,"purchase_date":"2024-06-15"}]
+```
+
+## Task 9
+
+```text
+$ curl -X GET http://127.0.0.1:8000/fetchDealers
+[{"id":1,"city":"Wichita","state":"Kansas","address":"7420 East Kellogg Drive","zip":"67207","lat":37.6763,"long":-97.2364,"short_name":"Best Cars Wichita","full_name":"Best Cars Dealership - Wichita"},{"id":2,"city":"Topeka","state":"Kansas","address":"1234 Wanamaker Road","zip":"66604","lat":39.0338,"long":-95.7627,"short_name":"Best Cars Topeka","full_name":"Best Cars Dealership - Topeka"},{"id":3,"city":"Overland Park","state":"Kansas","address":"8800 Metcalf Avenue","zip":"66212","lat":38.9706,"long":-94.6686,"short_name":"Best Cars Overland Park","full_name":"Best Cars Dealership - Overland Park"},{"id":4,"city":"Kansas City","state":"Kansas","address":"5100 State Avenue","zip":"66102","lat":39.1142,"long":-94.6275,"short_name":"Best Cars Kansas City","full_name":"Best Cars Dealership - Kansas City"},{"id":5,"city":"Olathe","state":"Kansas","address":"1500 South Hamilton Circle","zip":"66061","lat":38.8814,"long":-94.8191,"short_name":"Best Cars Olathe","full_name":"Best Cars Dealership - Olathe"},{"id":6,"city":"Dallas","state":"Texas","address":"2100 North Central Expressway","zip":"75231","lat":32.8128,"long":-96.7936,"short_name":"Best Cars Dallas","full_name":"Best Cars Dealership - Dallas"},{"id":7,"city":"Houston","state":"Texas","address":"6800 Richmond Avenue","zip":"77057","lat":29.7312,"long":-95.4985,"short_name":"Best Cars Houston","full_name":"Best Cars Dealership - Houston"},{"id":8,"city":"Austin","state":"Texas","address":"3200 South Congress Avenue","zip":"78704","lat":30.2449,"long":-97.7563,"short_name":"Best Cars Austin","full_name":"Best Cars Dealership - Austin"},{"id":9,"city":"San Antonio","state":"Texas","address":"4400 Northwest Loop 410","zip":"78229","lat":29.4724,"long":-98.5454,"short_name":"Best Cars San Antonio","full_name":"Best Cars Dealership - San Antonio"},{"id":10,"city":"Fort Worth","state":"Texas","address":"2900 West Airport Freeway","zip":"76116","lat":32.7657,"long":-97.3747,"short_name":"Best Cars Fort Worth","full_name":"Best Cars Dealership - Fort Worth"},{"id":11,"city":"Chicago","state":"Illinois","address":"4550 North Lincoln Avenue","zip":"60625","lat":41.9625,"long":-87.6877,"short_name":"Best Cars Chicago","full_name":"Best Cars Dealership - Chicago"},{"id":12,"city":"Springfield","state":"Illinois","address":"1800 South Dirksen Parkway","zip":"62703","lat":39.7681,"long":-89.6154,"short_name":"Best Cars Springfield","full_name":"Best Cars Dealership - Springfield"},{"id":13,"city":"Naperville","state":"Illinois","address":"1750 West Ogden Avenue","zip":"60540","lat":41.7677,"long":-88.1782,"short_name":"Best Cars Naperville","full_name":"Best Cars Dealership - Naperville"},{"id":14,"city":"Peoria","state":"Illinois","address":"7300 North University Street","zip":"61615","lat":40.7521,"long":-89.6165,"short_name":"Best Cars Peoria","full_name":"Best Cars Dealership - Peoria"},{"id":15,"city":"Rockford","state":"Illinois","address":"4100 East State Street","zip":"61108","lat":42.2647,"long":-89.0111,"short_name":"Best Cars Rockford","full_name":"Best Cars Dealership - Rockford"},{"id":16,"city":"Denver","state":"Colorado","address":"8800 East Colfax Avenue","zip":"80220","lat":39.7408,"long":-104.8935,"short_name":"Best Cars Denver","full_name":"Best Cars Dealership - Denver"},{"id":17,"city":"Boulder","state":"Colorado","address":"2900 28th Street","zip":"80301","lat":40.0264,"long":-105.2523,"short_name":"Best Cars Boulder","full_name":"Best Cars Dealership - Boulder"},{"id":18,"city":"Colorado Springs","state":"Colorado","address":"4200 North Academy Boulevard","zip":"80918","lat":38.8954,"long":-104.7817,"short_name":"Best Cars Colorado Springs","full_name":"Best Cars Dealership - Colorado Springs"},{"id":19,"city":"Aurora","state":"Colorado","address":"13600 East Mississippi Avenue","zip":"80012","lat":39.6967,"long":-104.8332,"short_name":"Best Cars Aurora","full_name":"Best Cars Dealership - Aurora"},{"id":20,"city":"Fort Collins","state":"Colorado","address":"2300 South College Avenue","zip":"80525","lat":40.5473,"long":-105.0785,"short_name":"Best Cars Fort Collins","full_name":"Best Cars Dealership - Fort Collins"},{"id":21,"city":"Phoenix","state":"Arizona","address":"3100 East Camelback Road","zip":"85016","lat":33.5105,"long":-112.0137,"short_name":"Best Cars Phoenix","full_name":"Best Cars Dealership - Phoenix"},{"id":22,"city":"Tucson","state":"Arizona","address":"4500 East Broadway Boulevard","zip":"85710","lat":32.2217,"long":-110.8938,"short_name":"Best Cars Tucson","full_name":"Best Cars Dealership - Tucson"},{"id":23,"city":"Mesa","state":"Arizona","address":"1930 South Stapley Drive","zip":"85204","lat":33.3801,"long":-111.8029,"short_name":"Best Cars Mesa","full_name":"Best Cars Dealership - Mesa"},{"id":24,"city":"Scottsdale","state":"Arizona","address":"7300 East McDowell Road","zip":"85257","lat":33.4651,"long":-111.9211,"short_name":"Best Cars Scottsdale","full_name":"Best Cars Dealership - Scottsdale"},{"id":25,"city":"Tempe","state":"Arizona","address":"820 South Mill Avenue","zip":"85281","lat":33.4217,"long":-111.94,"short_name":"Best Cars Tempe","full_name":"Best Cars Dealership - Tempe"},{"id":26,"city":"Los Angeles","state":"California","address":"5600 Van Nuys Boulevard","zip":"91401","lat":34.1737,"long":-118.4484,"short_name":"Best Cars Los Angeles","full_name":"Best Cars Dealership - Los Angeles"},{"id":27,"city":"San Diego","state":"California","address":"7800 Clairemont Mesa Boulevard","zip":"92111","lat":32.8328,"long":-117.1563,"short_name":"Best Cars San Diego","full_name":"Best Cars Dealership - San Diego"},{"id":28,"city":"San Jose","state":"California","address":"2500 Stevens Creek Boulevard","zip":"95128","lat":37.323,"long":-121.9464,"short_name":"Best Cars San Jose","full_name":"Best Cars Dealership - San Jose"},{"id":29,"city":"Fresno","state":"California","address":"4600 East Shaw Avenue","zip":"93710","lat":36.8088,"long":-119.737,"short_name":"Best Cars Fresno","full_name":"Best Cars Dealership - Fresno"},{"id":30,"city":"Sacramento","state":"California","address":"2900 Fulton Avenue","zip":"95821","lat":38.6207,"long":-121.3832,"short_name":"Best Cars Sacramento","full_name":"Best Cars Dealership - Sacramento"},{"id":31,"city":"Seattle","state":"Washington","address":"4000 Aurora Avenue North","zip":"98103","lat":47.6545,"long":-122.3466,"short_name":"Best Cars Seattle","full_name":"Best Cars Dealership - Seattle"},{"id":32,"city":"Spokane","state":"Washington","address":"9200 East Sprague Avenue","zip":"99206","lat":47.6564,"long":-117.3029,"short_name":"Best Cars Spokane","full_name":"Best Cars Dealership - Spokane"},{"id":33,"city":"Tacoma","state":"Washington","address":"5600 South Tacoma Way","zip":"98409","lat":47.2071,"long":-122.4837,"short_name":"Best Cars Tacoma","full_name":"Best Cars Dealership - Tacoma"},{"id":34,"city":"Portland","state":"Oregon","address":"6900 Southeast Foster Road","zip":"97206","lat":45.4826,"long":-122.5925,"short_name":"Best Cars Portland","full_name":"Best Cars Dealership - Portland"},{"id":35,"city":"Eugene","state":"Oregon","address":"1800 West 11th Avenue","zip":"97402","lat":44.0487,"long":-123.125,"short_name":"Best Cars Eugene","full_name":"Best Cars Dealership - Eugene"},{"id":36,"city":"Miami","state":"Florida","address":"7800 Southwest 40th Street","zip":"33155","lat":25.732,"long":-80.3251,"short_name":"Best Cars Miami","full_name":"Best Cars Dealership - Miami"},{"id":37,"city":"Orlando","state":"Florida","address":"5400 International Drive","zip":"32819","lat":28.4664,"long":-81.468,"short_name":"Best Cars Orlando","full_name":"Best Cars Dealership - Orlando"},{"id":38,"city":"Tampa","state":"Florida","address":"3300 North Dale Mabry Highway","zip":"33607","lat":27.9671,"long":-82.5062,"short_name":"Best Cars Tampa","full_name":"Best Cars Dealership - Tampa"},{"id":39,"city":"Jacksonville","state":"Florida","address":"9900 Atlantic Boulevard","zip":"32225","lat":30.3307,"long":-81.5174,"short_name":"Best Cars Jacksonville","full_name":"Best Cars Dealership - Jacksonville"},{"id":40,"city":"Atlanta","state":"Georgia","address":"2600 Piedmont Road","zip":"30324","lat":33.8245,"long":-84.3678,"short_name":"Best Cars Atlanta","full_name":"Best Cars Dealership - Atlanta"},{"id":41,"city":"Savannah","state":"Georgia","address":"1200 Eisenhower Drive","zip":"31406","lat":32.01,"long":-81.105,"short_name":"Best Cars Savannah","full_name":"Best Cars Dealership - Savannah"},{"id":42,"city":"Charlotte","state":"North Carolina","address":"6400 South Boulevard","zip":"28217","lat":35.1467,"long":-80.884,"short_name":"Best Cars Charlotte","full_name":"Best Cars Dealership - Charlotte"},{"id":43,"city":"Raleigh","state":"North Carolina","address":"4500 Capital Boulevard","zip":"27604","lat":35.8564,"long":-78.5706,"short_name":"Best Cars Raleigh","full_name":"Best Cars Dealership - Raleigh"},{"id":44,"city":"Nashville","state":"Tennessee","address":"3000 Franklin Road","zip":"37204","lat":36.1062,"long":-86.7903,"short_name":"Best Cars Nashville","full_name":"Best Cars Dealership - Nashville"},{"id":45,"city":"Memphis","state":"Tennessee","address":"5000 Poplar Avenue","zip":"38117","lat":35.1104,"long":-89.8861,"short_name":"Best Cars Memphis","full_name":"Best Cars Dealership - Memphis"},{"id":46,"city":"New York","state":"New York","address":"2100 Queens Boulevard","zip":"11377","lat":40.7454,"long":-73.9167,"short_name":"Best Cars New York","full_name":"Best Cars Dealership - New York"},{"id":47,"city":"Buffalo","state":"New York","address":"1200 Main Street","zip":"14209","lat":42.9227,"long":-78.8647,"short_name":"Best Cars Buffalo","full_name":"Best Cars Dealership - Buffalo"},{"id":48,"city":"Boston","state":"Massachusetts","address":"900 Commonwealth Avenue","zip":"02215","lat":42.3505,"long":-71.111,"short_name":"Best Cars Boston","full_name":"Best Cars Dealership - Boston"},{"id":49,"city":"Detroit","state":"Michigan","address":"1800 Woodward Avenue","zip":"48226","lat":42.3347,"long":-83.046,"short_name":"Best Cars Detroit","full_name":"Best Cars Dealership - Detroit"},{"id":50,"city":"Indianapolis","state":"Indiana","address":"4200 North Keystone Avenue","zip":"46205","lat":39.8333,"long":-86.124,"short_name":"Best Cars Indianapolis","full_name":"Best Cars Dealership - Indianapolis"}]
+```
+
+## Task 10
+
+```text
+$ curl -X GET http://127.0.0.1:8000/fetchDealer/1
+{"id":1,"city":"Wichita","state":"Kansas","address":"7420 East Kellogg Drive","zip":"67207","lat":37.6763,"long":-97.2364,"short_name":"Best Cars Wichita","full_name":"Best Cars Dealership - Wichita"}
+```
+
+## Task 11
+
+```text
+$ curl -X GET http://127.0.0.1:8000/fetchDealers/Kansas
+[{"id": 1, "city": "Wichita", "state": "Kansas", "address": "7420 East Kellogg Drive", "zip": "67207", "lat": 37.6763, "long": -97.2364, "short_name": "Best Cars Wichita", "full_name": "Best Cars Dealership - Wichita"}, {"id": 2, "city": "Topeka", "state": "Kansas", "address": "1234 Wanamaker Road", "zip": "66604", "lat": 39.0338, "long": -95.7627, "short_name": "Best Cars Topeka", "full_name": "Best Cars Dealership - Topeka"}, {"id": 3, "city": "Overland Park", "state": "Kansas", "address": "8800 Metcalf Avenue", "zip": "66212", "lat": 38.9706, "long": -94.6686, "short_name": "Best Cars Overland Park", "full_name": "Best Cars Dealership - Overland Park"}, {"id": 4, "city": "Kansas City", "state": "Kansas", "address": "5100 State Avenue", "zip": "66102", "lat": 39.1142, "long": -94.6275, "short_name": "Best Cars Kansas City", "full_name": "Best Cars Dealership - Kansas City"}, {"id": 5, "city": "Olathe", "state": "Kansas", "address": "1500 South Hamilton Circle", "zip": "66061", "lat": 38.8814, "long": -94.8191, "short_name": "Best Cars Olathe", "full_name": "Best Cars Dealership - Olathe"}]
+```
+
+## Task 12
+
+**File to upload:** `admin_login.png`
+
+![Admin page with root user logged in.](admin_login.png)
+
+## Task 13
+
+**File to upload:** `admin_logout.png`
+
+![Admin page after root user logout.](admin_logout.png)
+
+## Tasks 14 and 15
+
+```text
+$ curl -X GET http://127.0.0.1:8000/djangoapp/get_cars
+{"CarModels":[{"Make":"Toyota","Model":"Camry"},{"Make":"Honda","Model":"Accord"},{"Make":"Ford","Model":"Mustang"},{"Make":"Chevrolet","Model":"Malibu"},{"Make":"Nissan","Model":"Altima"},{"Make":"BMW","Model":"3 Series"},{"Make":"Mercedes-Benz","Model":"C-Class"},{"Make":"Audi","Model":"A4"},{"Make":"Hyundai","Model":"Sonata"},{"Make":"Kia","Model":"K5"},{"Make":"Subaru","Model":"Outback"},{"Make":"Mazda","Model":"CX-5"},{"Make":"Volkswagen","Model":"Jetta"},{"Make":"Lexus","Model":"RX"},{"Make":"Volvo","Model":"XC60"}]}
+```
+
+## Task 16
+
+```text
+$ curl -X GET "http://127.0.0.1:8000/analyze/Fantastic%20services"
+{"sentiment":"positive"}
+```
+
+## Task 17
+
+**File to upload:** `get_dealers.png`
+
+![Dealers displayed before login.](get_dealers.png)
+
+## Task 18
+
+**File to upload:** `get_dealers_loggedin.png`
+
+![Dealers displayed after login with root and Review Dealer.](get_dealers_loggedin.png)
+
+## Task 19
+
+**File to upload:** `dealersbystate.png`
+
+![Dealers filtered by Kansas.](dealersbystate.png)
+
+## Task 20
+
+**File to upload:** `dealer_id_reviews.png`
+
+![Selected dealer details and reviews.](dealer_id_reviews.png)
+
+## Task 21
+
+**File to upload:** `dealership_review_submission.png`
+
+![Filled Post Review form before submission.](dealership_review_submission.png)
+
+## Task 22
+
+**File to upload:** `added_review.png`
+
+![Posted review with sentiment result.](added_review.png)
+
+## Task 23
+
+```text
+Workflow: Lint Python and JavaScript
+Run: #6 (commit ec87b8b)
+Status: ✓ Success
+
+Lint Python Files / lint-python (ubuntu-latest)
+  Job ID: 93247079688
+  Duration: 8s
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Set up Python
+  ✓ Install dependencies
+  ✓ Run Linter
+    python -m compileall server
+    Listing 'server'...
+    Listing 'server/djangoapp'...
+    Listing 'server/frontend'...
+  ✓ Post Set up Python
+  ✓ Post Checkout Repository
+  ✓ Complete job
+
+Lint JavaScript Files / lint-javascript (ubuntu-latest)
+  Job ID: 93247079646
+  Duration: 10s
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Install Node.js
+  ✓ Install JSHint
+  ✓ Run Linter
+    jshint server/frontend/src/config.js
+    node --check server/frontend/src/config.js
+  ✓ Post Install Node.js
+  ✓ Post Checkout Repository
+  ✓ Complete job
+
+All required CI/CD lint jobs completed successfully.
+```
+
+## Task 24
+
+```text
+https://minggu151623-8000.theiadockernext-0-labs-prod-theiak8s-4.proxy.cognitiveclass.ai/
+```
+
+## Task 25
+
+**File to upload:** `deployed_landingpage.png`
+
+![Deployed landing page.](deployed_landingpage.png)
+
+## Task 26
+
+**File to upload:** `deployed_loggedin.png`
+
+![Deployed page after login with root visible.](deployed_loggedin.png)
+
+## Task 27
+
+**File to upload:** `deployed_dealer_detail.png`
+
+![Deployed dealer details page.](deployed_dealer_detail.png)
+
+## Task 28
+
+**File to upload:** `deployed_add_review.png`
+
+![Posted review in the deployed application.](deployed_add_review.png)
 
 ## Local verification
 
@@ -52,7 +241,11 @@ cd server
 python3 manage.py runserver
 ```
 
-The local API evidence files contain the requested endpoint and representative
-JSON response for each API question. The deployment URL is recorded in
-`deploymentURL`; it must be replaced with the learner's live IBM Skills Network
-deployment URL if the grader requires a live, externally reachable deployment.
+Verified locally: 50 dealers, 5 Kansas dealers, 15 car models, login/logout,
+dealer/review endpoints, sentiment analysis, About/Contact routes, and HTTP 200
+responses for the main pages.
+
+> If the grader requires a live IBM Skills Network deployment, replace the value
+> in `deploymentURL` and the deployed screenshot address bars with your actual
+> active deployment URL before submitting.
+
