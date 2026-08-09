@@ -24,7 +24,7 @@ file after capture.
 | 12 | `admin_login.png` |
 | 13 | `admin_logout.png` |
 | 14–15 | `getallcarmakes` |
-| 16 | `analyzereview` |
+| 15 | `analyzereview` |
 | 16 | `get_dealers.png` |
 | 17 | `get_dealers_loggedin.png` |
 | 18 | `dealersbystate.png` |
